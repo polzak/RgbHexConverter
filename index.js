@@ -36,6 +36,7 @@ const RgbHexConverter = (color) => {
         if (rgbCode.length < 3) {
             return 'Please provide each number less than 256.';
         }
+        
         rgbCode = rgbCode.map(el => (el < 16) ? '0' + el.toString(16) : el.toString(16)); //convert each number into a hexadecimal string
         const hexResult = '#' + rgbCode.join(''); //join the hex string elements in the array to create a Hex code
 
@@ -88,10 +89,13 @@ const testRgbHexConverter = (testNum) => {
     while (counter < testNum) {
         const randomHex = generateRandomHex();
         const randomRGB = generateRandomRGB();
+        
         const test1 = randomHex === RgbHexConverter(RgbHexConverter(randomHex));
         const test2 = randomRGB === RgbHexConverter(RgbHexConverter(randomRGB));
         
         if (test1 === false || test2 === false) {
+            console.log(randomRGB);
+            console.log(randomHex);
             break;
         }
     
@@ -101,3 +105,5 @@ const testRgbHexConverter = (testNum) => {
     console.log(counter);
     console.log('end');
 }
+
+//testRgbHexConverter(1000);
