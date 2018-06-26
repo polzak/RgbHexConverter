@@ -1,4 +1,4 @@
-const RgbHexConverter = (color) => {
+exports.converter = function(color) {
 
     let rgbCode; //if user input is RGB code, use this variable
     let hexCode; //if user input is Hex code, use this one
@@ -67,7 +67,7 @@ const RgbHexConverter = (color) => {
     }
 }
 
-const generateRandomHex = () => {
+exports.generateRandomHex = function() {
     const digit = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'];
     let hex = '';
 
@@ -78,20 +78,20 @@ const generateRandomHex = () => {
     return '#' + hex;
 }
 
-const generateRandomRGB = () => {
+exports.generateRandomRGB = function() {
     const rgb = 'rgb(' + [Math.floor(Math.random()*256), Math.floor(Math.random()*256), Math.floor(Math.random()*256)].join(', ') + ')';
     return rgb;
 }
 
-const testRgbHexConverter = (testNum) => {
+exports.testConverter = function(testNum) {
     let counter = 0;
 
     while (counter < testNum) {
-        const randomHex = generateRandomHex();
-        const randomRGB = generateRandomRGB();
+        const randomHex = exports.generateRandomHex();
+        const randomRGB = exports.generateRandomRGB();
         
-        const test1 = randomHex === RgbHexConverter(RgbHexConverter(randomHex));
-        const test2 = randomRGB === RgbHexConverter(RgbHexConverter(randomRGB));
+        const test1 = randomHex === exports.converter(exports.converter(randomHex));
+        const test2 = randomRGB === exports.converter(exports.converter(randomRGB));
         
         if (test1 === false || test2 === false) {
             console.log(randomRGB);
@@ -103,7 +103,5 @@ const testRgbHexConverter = (testNum) => {
     }
     
     console.log(counter);
-    console.log('end');
+    console.log('End');
 }
-
-//testRgbHexConverter(1000);

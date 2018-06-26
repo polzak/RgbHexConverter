@@ -1,0 +1,19 @@
+{
+  "name": "RgbHexConverter",
+  "version": "1.0.0",
+  "description": "This converts CSS hex code to RGB code, and vice versa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polzak/RgbHexConverter.git"
+  },
+  "author": "Polzak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polzak/RgbHexConverter/issues"
+  },
+  "homepage": "https://github.com/polzak/RgbHexConverter#readme"
+}
