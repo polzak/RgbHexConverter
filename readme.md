@@ -1,4 +1,4 @@
-# Hex and RGB Code Converter
+# Simple RGB-HEX Converter
 
 This converts CSS hex code to RGB code, and vice versa. 
 
@@ -12,7 +12,9 @@ output -> '#f60387'
 
 ### Usage
 const converter = require('RgbHexConverter').converter;
+
 const rgbCode = converter('#f60387');
+
 console.log(rgbCode);
 
 #### Generate Random Hex Code
