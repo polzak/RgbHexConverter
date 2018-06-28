@@ -2,25 +2,14 @@
 
 This converts CSS hex code to RGB code, and vice versa. 
 
-### Example
-
-#### given '#f60387'
-output -> 'rgb(246, 3, 135)'
-
-#### given 'rgb(246, 3, 135)'
-output -> '#f60387'
-
 ### Usage
 ```javascript
-const simpleRgbHexConverter = require('RgbHexConverter');
-
+const simpleRgbHexConverter = require('simple-rgb-hex-converter');
 const rgbCode = simpleRgbHexConverter.converter('#f60387');
-
-console.log(rgbCode);
+console.log(rgbCode); //'rgb(246, 3, 135)'
 
 const hexCode = simpleRgbHexConverter.converter('rgb(246, 3, 135)');
-
-console.log(hexCode);
+console.log(hexCode); //'#f60387'
 ```
 
 #### Generate Random Hex Code
