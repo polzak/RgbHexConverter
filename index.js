@@ -11,6 +11,14 @@ exports.converter = function(color) {
         }
     }
 
+    if (color.startsWith('(')) { 
+        color = color.slice(1);
+        
+        if (color.endsWith(')')) {
+            color = color.slice(0, color.length-1);
+        }
+    }
+
     if (color.startsWith('#')) {
         color = color.slice(1);
     }
