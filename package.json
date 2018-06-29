@@ -1,6 +1,6 @@
 {
   "name": "simple-rgb-hex-converter",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Converts CSS hex code to RGB code, and vice versa",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/polzak/simple-rgb-hex-converter.git"
   },
   "author": "Polzak",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/polzak/RgbHexConverter/issues"
   },
